@@ -1,0 +1,14 @@
+open a new terminal and enter the .vnev using command
+
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+.\venv\Scripts\Activate.ps1
+
+After that execute 
+
+python app.py
+
+
+then open the index.html in browser to access our webapp .
+
+make sure u have a stable internet connection...

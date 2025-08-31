@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LegalEase v2.0</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>\
+<header>
+  <div class="header-left">
+    <button id="aboutBtn">About</button>
+  </div>
+
+  <div class="header-center">
+    <h1>LegalEase</h1>
+    <p>AI Contract Simplifier</p>
+  </div>
+
+  <div class="header-right">
+    <div class="powered-by">
+      Powered by <strong>InLegalBERT</strong> &amp; <strong>Gemini</strong>
+    </div>
+  </div>
+</header>
+  <main>
+    <section class="input-section">
+      <label for="upload">Upload Contract (PDF/DOCX/TXT):</label>
+      <input type="file" id="upload" accept=".pdf,.docx,.txt" />
+
+      <button id="analyzeBtn">Analyze Contract</button>
+    </section>
+
+    <section class="or-divider">OR</section>
+
+    <section class="input-section">
+      <label for="contractInput">Or Paste Contract Text:</label>
+      <textarea id="contractInput" placeholder="Paste contract text here…"></textarea>
+      <button id="analyzeTextBtn">Analyze Text</button>
+    </section>
+
+    <section id="loading" class="hidden">
+      <div class="spinner"></div>
+      <p>Analyzing… Please wait.</p>
+    </section>
+
+    <section id="outputPanel" class="hidden">
+      <nav class="tabs">
+        <button data-tab="detailed" class="active">Detailed Summary</button>
+        <button data-tab="terms">Key Terms</button>
+        <button data-tab="risk">Risk Assessment</button>
+        <button data-tab="obligations">Obligations</button>
+        <button data-tab="qa">Ask Question</button>
+      </nav>
+
+      <div id="detailed" class="tab-content"></div>
+      <div id="terms" class="tab-content hidden"></div>
+      <div id="risk" class="tab-content hidden"></div>
+      <div id="obligations" class="tab-content hidden"></div>
+      <div id="qa" class="tab-content hidden">
+        <textarea id="questionInput" placeholder="Ask anything about the contract…"></textarea>
+        <button id="askBtn">Ask</button>
+        <div id="qaResult"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+<footer id="footer">
+  <div class="footer-content">
+    <span>Made By Abhijot Singh</span>
+  </div>
+</footer>
+</html>

@@ -1,0 +1,249 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f9fc;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the middle content */
+  background: #023252;
+  color: white;
+  padding: 20px;
+  position: relative;
+}
+
+.header-left {
+  position: absolute;
+  left: 20px;
+}
+
+.header-center {
+  text-align: center;
+  /* optional max-width */
+  max-width: 600px;
+  width: 100%;
+}
+
+#aboutBtn {
+  background: #ff7f00;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#aboutBtn:hover {
+  background: #e67300;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.input-section {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="file"],
+select,
+textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+button {
+  background: #ff7f00;   /* Orange buttons */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+button:hover {
+  background: #e67300;   /* Darker orange on hover */
+}
+
+.or-divider {
+  text-align: center;
+  margin: 20px 0;
+  font-style: italic;
+}
+
+.hidden {
+  display: none;
+}
+
+.spinner {
+  border: 6px solid #eee;
+  border-top: 6px solid #005bff;  /* Blue spinner top */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 10px;
+  background: #e0f0ff;   /* Light blue tab background */
+  border-bottom: 2px solid transparent;
+  color: #005bff;         /* Blue text */
+}
+
+.tabs button.active {
+  background: #005bff;    /* Blue active tab */
+  color: white;
+  border-bottom: 2px solid #ff7f00;  /* Orange underline */
+}
+
+.tab-content {
+  background: white;
+  padding: 15px;
+  border: 1px solid #e0f0ff;  /* Light blue border */
+  border-top: none;
+  min-height: 200px;
+}
+
+.tab-content p,
+.tab-content ul,
+.tab-content div {
+  margin-bottom: 10px;
+}
+
+#questionInput {
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+#qaResult {
+  margin-top: 15px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+#footer {
+  background-color: #023052;  /* Dark blue background: match header or style */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;       /* sticks to bottom */
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+
+#footer .footer-content span {
+  margin: 0 8px;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #023252;
+  color: white;
+  position: relative;
+  padding: 20px;
+  min-height: 70px;
+}
+
+/* Left section - About button */
+.header-left {
+  position: absolute;
+  left: 20px;
+}
+
+/* Center section - Title */
+.header-center {
+  flex: 1;
+  text-align: center;
+}
+
+.header-center h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header-center p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Right section - Powered by */
+.header-right {
+  position: absolute;
+  right: 20px;
+}
+
+.powered-by {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.powered-by strong {
+  color: #ff7f00;
+  font-weight: bold;
+}
+
+/* Style for About button */
+#aboutBtn {
+  background: #ff7f00;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#aboutBtn:hover {
+  background: #e67300;
+}
